@@ -12,7 +12,7 @@ import random
 import json
 import pickle
 
-with open("intent.json")as file: #opening json and  checking data is connected to code
+with open("intents.json")as file: #opening json and  checking data is connected to code
     data = json.load(file) 
     # print(data['intents'])
 
@@ -78,7 +78,7 @@ except:
 #resetes underline  data
 tensorflow.compat.v1.reset_default_graph()
 #-----AI-----
-
+print('--------------AI activate')
 #defiens input shape for model, len(training[0]) is what length will be expected
 net = tflearn.input_data(shape=[None, len(training[0])])
 
@@ -92,14 +92,30 @@ net= tflearn.regression(net)
 model = tflearn.DNN(net)#utlizes the network
 #-----AI  ENDs-----
 
-
+print("----------------")
 try:
     model.load('model.tflearn')
 except:
-    #n_epoch is the number of times it get to see the data, to better clasify
+ #if the path reagars a problem commen lines 79 and 92 and uncomment lines 101 to 112
+    
+    # tensorflow.compat.v1.reset_default_graph()
+    # #-----AI-----
+    # print('--------------AI activate')
+    # #defiens input shape for model, len(training[0]) is what length will be expected
+    # net = tflearn.input_data(shape=[None, len(training[0])])
+
+    # net = tflearn.fully_connected(net,8) #provided 8 nurones for the training[0]
+    # net = tflearn.fully_connected(net,8)#both hidden layyers, full connectd to in and out
+    # #provide nurones for output, actiation provied probaliityes for output
+    # net = tflearn.fully_connected(net,len(output[0]),activation = 'softmax')
+    # #softmax has 6 nueral networks instead of 8
+    # net= tflearn.regression(net)
+
+    # model = tflearn.DNN(net)#utlizes the network
+       #n_epoch is the number of times it get to see the data, to better clasify
     model.fit(training, output, n_epoch=1000,batch_size=8, show_metric=True)
     model.save("model.tflearn")
-    
+        
 
 def turn_sentenceFromUser_to_BagOfWOrds(s,words):#Robot only uinderstanding workd Bags
     
@@ -113,7 +129,8 @@ def turn_sentenceFromUser_to_BagOfWOrds(s,words):#Robot only uinderstanding work
                 bag[idx]= 1#reaplce zero with one
     return numpy.array(bag)                
     
-    
+
+print('inoupt on')    
 def ask_user_for_sentence_and_produce_outPut():
     print("Begin you'er communication with the T800 (conclude discourse by sayin aaagggaahh)")
     
@@ -132,4 +149,6 @@ def ask_user_for_sentence_and_produce_outPut():
                 res = tg['responses']
         print(random.choice(res))
                 
+
+print('Conlcusion')
 ask_user_for_sentence_and_produce_outPut()

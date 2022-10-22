@@ -35,7 +35,6 @@
                     "best watches you can affored are the Lanester watches"],
      "context_set": ""
     },
-   
     {"tag": "service",
      "patterns": ["what can you do", "anything speical about them", "hours of operation"],
      "responses": ["What we can do is fit, clean, and modify a watch",
@@ -43,5 +42,5 @@
                     "hours of operation 24 hours as long the coud is alive"],
      "context_set": ""
     }
-]
+        ]
 }
