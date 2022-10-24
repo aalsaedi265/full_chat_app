@@ -80,16 +80,16 @@ tensorflow.compat.v1.reset_default_graph()
 #-----AI-----
 print('--------------AI activate')
 #defiens input shape for model, len(training[0]) is what length will be expected
-net = tflearn.input_data(shape=[None, len(training[0])])
+# net = tflearn.input_data(shape=[None, len(training[0])])
 
-net = tflearn.fully_connected(net,8) #provided 8 nurones for the training[0]
-net = tflearn.fully_connected(net,8)#both hidden layyers, full connectd to in and out
-#provide nurones for output, actiation provied probaliityes for output
-net = tflearn.fully_connected(net,len(output[0]),activation = 'softmax')
-#softmax has 6 nueral networks instead of 8
-net= tflearn.regression(net)
+# net = tflearn.fully_connected(net,8) #provided 8 nurones for the training[0]
+# net = tflearn.fully_connected(net,8)#both hidden layyers, full connectd to in and out
+# #provide nurones for output, actiation provied probaliityes for output
+# net = tflearn.fully_connected(net,len(output[0]),activation = 'softmax')
+# #softmax has 6 nueral networks instead of 8
+# net= tflearn.regression(net)
 
-model = tflearn.DNN(net)#utlizes the network
+# model = tflearn.DNN(net)#utlizes the network
 #-----AI  ENDs-----
 
 print("----------------")
@@ -98,22 +98,22 @@ try:
 except:
  #if the path reagars a problem commen lines 79 and 92 and uncomment lines 101 to 112
     
-    # tensorflow.compat.v1.reset_default_graph()
-    # #-----AI-----
-    # print('--------------AI activate')
-    # #defiens input shape for model, len(training[0]) is what length will be expected
-    # net = tflearn.input_data(shape=[None, len(training[0])])
+    tensorflow.compat.v1.reset_default_graph()
+    #-----AI-----
+    print('--------------AI activate')
+    #defiens input shape for model, len(training[0]) is what length will be expected
+    net = tflearn.input_data(shape=[None, len(training[0])])
 
-    # net = tflearn.fully_connected(net,8) #provided 8 nurones for the training[0]
-    # net = tflearn.fully_connected(net,8)#both hidden layyers, full connectd to in and out
-    # #provide nurones for output, actiation provied probaliityes for output
-    # net = tflearn.fully_connected(net,len(output[0]),activation = 'softmax')
-    # #softmax has 6 nueral networks instead of 8
-    # net= tflearn.regression(net)
+    net = tflearn.fully_connected(net,8) #provided 8 nurones for the training[0]
+    net = tflearn.fully_connected(net,8)#both hidden layyers, full connectd to in and out
+    #provide nurones for output, actiation provied probaliityes for output
+    net = tflearn.fully_connected(net,len(output[0]),activation = 'softmax')
+    #softmax has 6 nueral networks instead of 8
+    net= tflearn.regression(net)
 
-    # model = tflearn.DNN(net)#utlizes the network
+    model = tflearn.DNN(net)#utlizes the network
        #n_epoch is the number of times it get to see the data, to better clasify
-    model.fit(training, output, n_epoch=1000,batch_size=8, show_metric=True)
+    model.fit(training, output, n_epoch=100,batch_size=8, show_metric=True)
     model.save("model.tflearn")
         
 
@@ -132,11 +132,11 @@ def turn_sentenceFromUser_to_BagOfWOrds(s,words):#Robot only uinderstanding work
 
 print('inoupt on')    
 def ask_user_for_sentence_and_produce_outPut():
-    print("Begin you'er communication with the T800 (conclude discourse by sayin aaagggaahh)")
+    print("Begin you'er communication with the T800 (conclude discourse by sayin quit)")
     
     while True:
         inp = input("Human_MeatBag: ")
-        if inp.lower()=="aaagggaahh":
+        if inp.lower()=="quit":
             break
         #will give the out put, t it will be number format not human readable
         results=model.predict([turn_sentenceFromUser_to_BagOfWOrds(inp, words)])

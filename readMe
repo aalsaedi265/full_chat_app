@@ -1,0 +1,28 @@
+the lindo docs video of lunching code 
+
+https://www.linode.com/content/deploying-a-simple-python-web-server/
+git hub for all the code https://github.com/techwithtim/Flask-App-Hosted-On-VPS
+
+mkdir flask_project was done to begin the linking of the application with server
+
+NGNIX will connect the public to local IP address 
+apt get-upgrade apt install nginx
+
+nano /etc/nginx/sites-enabled/<directory-name-of-flask-app> for me this is 
+flask_project
+
+server {
+    listen 80;
+    server_name <public-server-ip>;
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+
+unlink /etc/nginx/sites-enabled/default
+
+
+run the app in the server  gunicorn -w 3 fileName/folder:app
