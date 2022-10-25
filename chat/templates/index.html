@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js" > </script>
+    </head>
+    <body>
+        <script>
+        $(document).ready(function(){
+            //flsk back end acces by javgascript
+            var socket = io.connect("http://localhost:5000") //connection
+
+            socket.on('connect',function(){
+                socket.send('User connected !')
+            });
+            socket.on('#message',function(data){
+                $('#message').append($('<p>').text(data) );
+            });
+            $('#sendBtn').on('click',function(){
+                socket.send($('#username').val()+':'+$('#message').val() );
+                $('#message').val('');
+            });
+        })
+        </script>
+        <div id='messages'>
+
+        </div>
+
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="text" id="messages" placeholder="messages" required> 
+
+        <button id="sendBtn">send </button>
+        <script src="" async defer></script>
+    </body>
+</html>
