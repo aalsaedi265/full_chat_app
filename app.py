@@ -10,8 +10,8 @@ app = Flask(__name__)
 
 
 chatbot = ChatBot('ChatBot')
-trainer = ChatterBotCorpusTrainer(chatbot)
-trainer.train("chatterbot.corpus.english")
+# trainer = ChatterBotCorpusTrainer(chatbot)
+# trainer.train("chatterbot.corpus.english")
 workIt()
 # ask_user_for_sentence_and_produce_outPut()
 
