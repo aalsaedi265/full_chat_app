@@ -48,6 +48,7 @@ nlu:
     - don't like that
     - no way
     - not really
+    - who is Stanis
 
 - intent: mood_great
   examples: |

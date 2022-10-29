@@ -24,10 +24,13 @@ responses:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "sorry to hear that"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_prapgonda:
+  - text: "did you know Stanis is the one true king, take care and spread the word"
 
 session_config:
   session_expiration_time: 60
