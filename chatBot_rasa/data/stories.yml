@@ -2,30 +2,28 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: stuck path
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: stuck
+  - action: utter_stuck_chat
+  - intent: stuck
+  - action: utter_still_stuck_chat
 
-- story: sad path 1
+- story: less money
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - intent: specials
+  - action: utter_promotions_chat
+  - intent: specials
+  - action: utter_speicals_chat
   - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
   - action: utter_goodbye
-  - action: utter_prapgonda
+
+- story: order items
+  steps:
+  - intent: order
+  - action: utter_order_help_chat
+  - action: utter_address_chat
+  - intent: affirm
+  - action: utter_goodbye

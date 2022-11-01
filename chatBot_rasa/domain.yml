@@ -5,32 +5,69 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
+  - order
+  - specials
+  - stuck
   - bot_challenge
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Salutations! What can I do for you?"
+  - text: "hellow there"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    image: "https://preview.redd.it/1g4trqp0jph61.png?auto=webp&s=7b377b73601915d9f029cccdfe203ddbbb08d429"
 
   utter_did_that_help:
   - text: "Did that help you?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Godd for you"
 
   utter_goodbye:
-  - text: "sorry to hear that"
+  - text: "did you know Staniss the maniss is the one true king, take care and spread the word"
+  - text: "Staniss is the prince that was promised, go and spread the word"
+  - text: "the title of azur ahi only belongs to staniss, go and pread the word"
+
+  utter_speicals_chat:
+  - text: "no sales, discounts, or speicals here today"
+
+  utter_promotions_chat:
+  - text: "on holidays promo code will be avaliable to place in discount promt when checking out"
+
+  utter_address_chat:
+  - text: "before chekcout make sure address is accurate"
+
+  utter_order_help_chat:
+  - text: "go to the menu chose what you like, then go to cart to make sure you have all, finally checkout to pay"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "I am a machine, powered by electricity."
+
+  utter_stuck_chat:
+  - text: "refresh the page, all iteams selected will be saved, and paymenbt info will be reset"
+
+  utter_still_stuck_chat:
+  - text: "contact us at 254-366-1108"
 
   utter_prapgonda:
-  - text: "did you know Stanis is the one true king, take care and spread the word"
+  - text: "did you know Staniss the maniss is the one true king, take care and spread the word"
+
+# actions:
+#          - address_chat
+#          - utter_cheer_up
+#          - did_that_help_chat
+#          - utter_goodbye
+#          - utter_greet
+#          - utter_happy
+#          - utter_iamabot
+#          - order_help_chat
+#          - utter_prapgonda
+#          - promotions_chat
+#          - speicals_chat
+#          - still_stuck_chat
+#          - stuck_chat
 
 session_config:
   session_expiration_time: 60
