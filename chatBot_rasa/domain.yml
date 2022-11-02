@@ -10,10 +10,44 @@ intents:
   - stuck
   - bot_challenge
 
+entities:
+  - destination
+  - items
+  - name
+
+
+slots:
+  slot_name:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: name
+      
+  slot_destination:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: destination
+  slot_items:
+    type: list
+    mappings:
+    - type: from_entity
+      entity: items
+
+# slots:
+#   name:
+#     type: any
+#   destination:
+#     type: text
+#   items:
+#     type: list
+
+
+
 responses:
   utter_greet:
-  - text: "Salutations! What can I do for you?"
-  - text: "hellow there"
+  - text: "Salutations {name}! What can I do for you?"
+  - text: "hellow there, {name}"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
