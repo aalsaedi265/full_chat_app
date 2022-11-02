@@ -23,3 +23,7 @@ Make reponses and varables based resoens
 
 https://github.com/RasaHQ/helpdesk-assistant     doc
 https://www.youtube.com/watch?v=k2uA5gxTM80     demo
+
+
+This how to make button that give different action to be used like you ask, and it give two options
+https://forum.rasa.com/t/domain-yml-missing-text-or-custom-key-in-response-path/47215

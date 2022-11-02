@@ -23,7 +23,12 @@ stories:
 - story: order items
   steps:
   - intent: order
-  - action: utter_order_help_chat
-  - action: utter_address_chat
+  - action: utter_order
+  # - action: utter_address_chat
   - intent: affirm
   - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
