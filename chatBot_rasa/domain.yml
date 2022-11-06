@@ -5,10 +5,17 @@ intents:
   - goodbye
   - affirm
   - deny
-  - order
-  - specials
-  - stuck
+  - use_the_tech
+  - lower_prices
+  - tech_problems
+  - general_help
   - bot_challenge
+  - Frozen_page
+  - tech_problems_need_human
+  - frozenAdditonal_helpNeeded
+  - payment_menu_frozen
+  - common_reason_wont_checkout
+  - basic_finlizing
 
 entities:
   - destination
@@ -21,12 +28,17 @@ entities:
 
 slots:
   slot_name:
-    type: any
-    
+    type: text
+    influence_conversation: False
     mappings:
-    - type: from_entity
-      entity: name
+      - type: custom
       
+  # logged_in:
+  #   type: bool
+  #   influence_conversation: False
+  #   mappings:
+  #   - type: custom
+  
   slot_destination:
     type: text
     influence_conversation: True
@@ -39,76 +51,95 @@ slots:
     - type: from_entity
       entity: items
 
+
 responses:
+
+# https://forum.rasa.com/t/domain-yml-missing-text-or-custom-key-in-response-path/47215
+  utter_general_problem_one:
+  - text: "which obsticules are you facing"
+    buttons:
+    - title: "frozen page"
+      payload: "/payment_menu_frozen "
+    - title: "manuvering the site"
+      payload: "/use_the_tech"
+    - title: "sales"
+      payload: "/lower_prices"
+
+
+  utter_wont_progress_forwards_problem_two:
+  - text: "here are additional actions to take to remdie the situation"
+    buttons:
+    - title: "frozen page"
+      payload: "/Frozen_page"
+    - title: "need to talk to a human"
+      payload: "/tech_problems_need_human"
+
+  utter_how_to_chekout_site_problem_three:
+  - text: "having diffecility making a selection or checkout help here"
+    buttons:
+    - title: "manuver and select to purchase"
+      payload: "/use_the_tech"
+    - title: "common reason is address error click for more info"
+      payload: "/common_reason_wont_checkout"
+
+
+
+
+
   utter_greet:
-  - text: Salutations {slot_name}! What can I do for you?
-  - text: "hello there, {slot_name}"
+  - text: "hello there {slot_name}"
+  - text: "hi, {slot_name} let get down to business"
+    
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://preview.redd.it/1g4trqp0jph61.png?auto=webp&s=7b377b73601915d9f029cccdfe203ddbbb08d429"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
-
   utter_happy:
   - text: "Good for you"
     
-
   utter_goodbye:
   - text: "did you know Staniss the maniss is the one true king, take care and spread the word"
   - text: "Staniss is the prince that was promised, go and spread the word"
   - text: "the title of azur ahi only belongs to staniss, go and pread the word"
 
-  utter_speicals_chat:
-  - text: "no sales, discounts, or speicals here today"
-
-  utter_promotions_chat:
-  - text: "on holidays promo code will be avaliable to place in discount promt when checking out"
-
-
-# https://forum.rasa.com/t/domain-yml-missing-text-or-custom-key-in-response-path/47215
-  utter_order:
-  - text: "where in the order are you stuck at human"
-    buttons:
-    - title: "frozen page"
-      payload: "/stuck"
-    - title: "promptions"
-      payload: "/specials"
-
-  utter_address_chat:
-  - text: "before chekcout make sure address is accurate"
-
-  utter_order_help_chat:
-  - text: "go to the menu chose what you like, then go to cart to make sure you have all, finally checkout to pay"
-
   utter_iamabot:
   - text: "I am a machine, powered by electricity."
     image: "https://st2.depositphotos.com/1724125/5963/v/950/depositphotos_59638049-stock-illustration-cheering-crowd.jpg"
 
+
+
+  utter_discount_speicals:
+  - text: "if you have promo code place it when getting to the chekout, for speical price today"
+
+  utter_holiday_promotions:
+  - text: "on holidays promo code will be avaliable to place in discount promt when checking out"
+
+  utter_normal_day_speicals:
+  - text: "no discount today"
+
+
+
+  utter_addressError_wont_checkOUt:
+  - text: "before chekcout make sure address is accurate"
+
+  utter_nav_select_goods:
+  - text: "go to the menu chose what you like, then go to cart to make sure you have all, finally checkout to pay"
+
+  utter_reward_program:
+  - text: "go account page and put information to earn points with every pruchase used to get cash back"
+
+
+
   utter_stuck_chat:
-  - text: "refresh the page, all iteams selected will be saved, and paymenbt info will be reset"
+  - text: "refresh the page, all iteams selected will be saved, and payment info will be reset"
+
+  utter_stuck_refresh_noGo:
+  - text: "if you made an account, close the app, and reopen, this will reset the system; actions prevously take will still be save"
 
   utter_still_stuck_chat:
   - text: "contact us at 254-366-1108"
 
-  utter_prapgonda:
-  - text: "did you know Staniss the maniss is the one true king, take care and spread the word"
-
-# actions:
-#          - address_chat
-#          - utter_cheer_up
-#          - did_that_help_chat
-#          - utter_goodbye
-#          - utter_greet
-#          - utter_happy
-#          - utter_iamabot
-#          - order_help_chat
-#          - utter_prapgonda
-#          - promotions_chat
-#          - speicals_chat
-#          - still_stuck_chat
-#          - stuck_chat
 
 session_config:
   session_expiration_time: 60

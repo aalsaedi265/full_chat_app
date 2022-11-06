@@ -3,8 +3,8 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - hello my name is (slot_name)
-    - hi, I am (slot_name)
+    - hello my name is [Daemion](slot_name)
+    - hi, I am [Daemion](slot_name)
     - hey
     - hello
     - hi
@@ -71,20 +71,31 @@ nlu:
     - it's not the way
     - not what i am looking for
 
-- intent: order
+  
+- intent: use_the_tech
   examples: |
     - how do I order
     - how to order
     - order help
     - help me order
     - order
-    - help me buy
-    - help me purchase
+
+  
+- intent: common_reason_wont_checkout
+  examples: |
+    - help me buy, won't accept
     - help me buy
     - I can't make payment
-    - finize purchase
+    - help me checkout
 
-- intent: specials
+- intent: basic_finlizing
+  examples: |
+    - can not checkout
+    - wont checkout
+    - help me purchase, not confirming 
+
+
+- intent: lower_prices
   examples: |
     - any good deals
     - deal of the day
@@ -95,21 +106,53 @@ nlu:
     - good offers
     - delivery special
     - days specials
+    - sales
+    - black friday or cyber monday
+    - lay aways
 
-- intent: stuck
+
+- intent: tech_problems_need_human
+  examples: |
+    - already tried refreshing the page
+    - what you told me did not work
+    - you are use less
+    - cutomer service
+    - I want a person
+    - I want a human 
+
+- intent: payment_menu_frozen
   examples: |
     - I can not make the order
     - i can't make the order
     - I cant make the order
     - menu is paused
     - paused menu
+
+- intent: Frozen_page
+  examples: |
+    - menu is paused
+    - paused menu
     - payment screen frozen
     - menu is frozen
     - screen frozen
     - checkout fozen
-    - I am stuck
-    - stuck
+    - page is frozen
 
+- intent: general_help
+  examples: |
+    - help
+    - help me 
+    - I need help
+    - assistance
+    - confused
+    - not sure what to do
+    - ?
+
+- intent: frozenAdditonal_helpNeeded
+  examples: |
+    - still no progress
+    - page still fozen
+    - it was not the way
 
 - intent: bot_challenge
   examples: |

@@ -2,33 +2,88 @@ version: "3.1"
 
 stories:
 
-- story: stuck path
+- story: stuck path 1
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: stuck
+  - intent: payment_menu_frozen
   - action: utter_stuck_chat
-  - intent: stuck
-  - action: utter_still_stuck_chat
 
-- story: less money
+- story: stuck path 2
   steps:
-  - intent: specials
-  - action: utter_promotions_chat
-  - intent: specials
-  - action: utter_speicals_chat
+  - intent: Frozen_page
+  - action: utter_stuck_refresh_noGo
+
+- story: stuck path 3
+  steps:
+  - intent: tech_problems_need_human
+  - action: utter_still_stuck_chat  
+
+
+
+- story: less money 1
+  steps:
+  - intent: lower_prices
+  - action: utter_holiday_promotions
+
+- story: less money 2
+  steps:
+  - intent: lower_prices
+  - action: utter_discount_speicals
+
+- story: less money 3
+  steps:
+  - intent: lower_prices
+  - action: utter_reward_program
+
+
+
+- story: use the site 1
+  steps:
+  - intent: use_the_tech
+  - action: utter_nav_select_goods
+
+- story: use the site 2
+  steps:
+  - intent: common_reason_wont_checkout
+  - action: utter_addressError_wont_checkOUt
+
+
+
+- story: general help 1
+  steps:
+  - intent: general_help
+  - action: utter_general_problem_one
+
+
+- story: how to use 2
+  steps:
+  - intent: frozenAdditonal_helpNeeded
+  - action: utter_wont_progress_forwards_problem_two  
+
+- story: how to finilize purchase or use 3
+  steps:
+  - intent: basic_finlizing
+  - action: utter_how_to_chekout_site_problem_three
+
+
+
+
+
+
+- story: quality control affirm
+  steps:
   - intent: affirm
   - action: utter_goodbye
 
-- story: order items
-  steps:
-  - intent: order
-  - action: utter_order
-  # - action: utter_address_chat
-  - intent: affirm
-  - action: utter_goodbye
-
-- story: bot challenge
+- story: quality control bot
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- story: say name dynamic experiment
+  steps:
+  # - action: action_login
+  # - slot_was_set:
+  #   - logged_in: True
+  - intent: greet
+  - action: utter_greet
+
