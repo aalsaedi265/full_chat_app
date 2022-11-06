@@ -1,9 +1,14 @@
 
 <!-- supsed to be just a pure website but not working -->
+
 <div id="rasa-chat-widget" data-websocket-url="https://your-rasa-url-here/"></div>
-<script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
+ <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
+
+
+
+<!-- react compoent -->
 <!-- 
-<head>
+  <head>
     <link rel="stylesheet" href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" />
   </head>
   <body>
@@ -22,3 +27,34 @@
       chatroom.openChat();
     </script>
   </body> -->
+  <!-- https://www.youtube.com/watch?v=eJMT2FovZsM     3:07 explain code-->
+  
+  
+  
+  <html>
+    <body>
+
+        <script>!(function () {
+          let e = document.createElement("script"),
+            t = document.head || document.getElementsByTagName("head")[0];
+          (e.src =
+            "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+            // Replace 1.x.x with the version that you want
+            (e.async = !0),
+            (e.onload = () => {
+              window.WebChat.default(
+                {
+                  initPayload:"/greet",
+                  customData: { language: "en" },
+                  socketUrl: "https://localhost:5005",
+                  // add other props here
+                },
+                null
+              );
+            }),
+            t.insertBefore(e, t.firstChild);
+        })();
+        </script>
+
+    </body>
+  </html>
