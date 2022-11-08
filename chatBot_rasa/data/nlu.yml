@@ -3,8 +3,8 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - hello my name is [Daemion](slot_name)
-    - hi, I am [Daemion](slot_name)
+    - hello my name is [Prince Daemion](name)
+    - hi, I am [King Joffrey](name)
     - hey
     - hello
     - hi

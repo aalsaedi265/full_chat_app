@@ -1,4 +1,7 @@
 
+https://www.youtube.com/watch?v=PfYBXidENlg&t=986s
+helpful example
+
 RASA: ALL OPEN SOURSE
 tensorflow in USE
 
@@ -27,6 +30,12 @@ https://github.com/Horizon733/rasa-webchat
 this for server to run a front end to people can write the wiget 
 activate api, sometime will need to enable cors => 
 
+
+
+pip install pyngrok
+https://rasa.com/docs/rasa/messaging-and-voice-channels/
+
+
 rasa run --enable-api 
 rasa run --enable-api --cors="*"
 
@@ -35,3 +44,4 @@ port - p provide prot
 cross origin resource sharing => cors
 
 python3 -m http.server to run index.html in the directory
+ngrok http 5005; rasa run
