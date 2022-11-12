@@ -36,12 +36,20 @@ pip install pyngrok
 https://rasa.com/docs/rasa/messaging-and-voice-channels/
 
 
+
+SERVER STUFF HTTP
+
+ngrok http 5005; rasa run
+
+pip install rasa_core
 rasa run --enable-api 
 rasa run --enable-api --cors="*"
+python3 -m rasa run --m ./models --endpoints endpoints.yml --port 5005 -vv --enable-api
+
+python3 -m rasa_core.run --enable_api --port 5005 -d models/dialogue -u models/nlu/default/weathernlu --credentials credentials.yml --endpoint endpoints.yml
 
 port - p provide prot 
 
 cross origin resource sharing => cors
 
-python3 -m http.server to run index.html in the directory
-ngrok http 5005; rasa run
+python3 -m http.server 800 //MY FRONT END IS ON 800 AND BACK IS ON 5005

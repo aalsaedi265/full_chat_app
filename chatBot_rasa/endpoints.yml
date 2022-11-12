@@ -11,7 +11,8 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 action_endpoint:
- url: "http://localhost:5055/webhook"
+ url: "http://localhost:5005/webhooks/rest/webhooks"
+
  #this is wrer the real url will be at, right now I am dong local serever
 
 # Tracker store which is used to store the conversations.
