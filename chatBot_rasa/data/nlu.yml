@@ -22,7 +22,6 @@ nlu:
     - I am stuck
     - help
     - stuck
-
 - intent: goodbye
   examples: |
     - cu
@@ -40,7 +39,6 @@ nlu:
     - have a good one
     - done
     - finished
-
 - intent: affirm
   examples: |
     - yes
@@ -56,7 +54,6 @@ nlu:
     - what is next
     - its the way
     - it's the way
-
 - intent: deny
   examples: |
     - no
@@ -70,7 +67,6 @@ nlu:
     - its not the way
     - it's not the way
     - not what i am looking for
-
   
 - intent: use_the_tech
   examples: |
@@ -79,7 +75,6 @@ nlu:
     - order help
     - help me order
     - order
-
   
 - intent: common_reason_wont_checkout
   examples: |
@@ -87,14 +82,11 @@ nlu:
     - help me buy
     - I can't make payment
     - help me checkout
-
 - intent: basic_finlizing
   examples: |
     - can not checkout
     - wont checkout
     - help me purchase, not confirming 
-
-
 - intent: lower_prices
   examples: |
     - any good deals
@@ -109,8 +101,6 @@ nlu:
     - sales
     - black friday or cyber monday
     - lay aways
-
-
 - intent: tech_problems_need_human
   examples: |
     - already tried refreshing the page
@@ -119,7 +109,6 @@ nlu:
     - cutomer service
     - I want a person
     - I want a human 
-
 - intent: payment_menu_frozen
   examples: |
     - I can not make the order
@@ -127,7 +116,6 @@ nlu:
     - I cant make the order
     - menu is paused
     - paused menu
-
 - intent: Frozen_page
   examples: |
     - menu is paused
@@ -137,7 +125,6 @@ nlu:
     - screen frozen
     - checkout fozen
     - page is frozen
-
 - intent: general_help
   examples: |
     - help
@@ -147,13 +134,11 @@ nlu:
     - confused
     - not sure what to do
     - ?
-
 - intent: frozenAdditonal_helpNeeded
   examples: |
     - still no progress
     - page still fozen
     - it was not the way
-
 - intent: bot_challenge
   examples: |
     - are you a bot?

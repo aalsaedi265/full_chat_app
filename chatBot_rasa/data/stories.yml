@@ -86,4 +86,3 @@ stories:
   #   - logged_in: True
   - intent: greet
   - action: utter_greet
-
