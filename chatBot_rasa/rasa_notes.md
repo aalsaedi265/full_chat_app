@@ -43,7 +43,6 @@ rasa main terminal: rasa run --cors "*"
 rasa main terminal: rasa run actions
 
 
-rasa run --enable-api
 
 port - p provide prot
 
@@ -52,3 +51,7 @@ cross origin resource sharing => cors
 8000 //MY FRONT END IS ON 800 AND BACK IS ON 5005        
 python3 -m http.server 
 npx http-server .
+
+------Lindoe install npm node and npx------
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+nvm install node

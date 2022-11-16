@@ -113,7 +113,7 @@ except:
 
     model = tflearn.DNN(net)#utlizes the network
        #n_epoch is the number of times it get to see the data, to better clasify
-    model.fit(training, output, n_epoch=100,batch_size=8, show_metric=True)
+    model.fit(training, output, n_epoch=5000,batch_size=8, show_metric=True)
     model.save("model.tflearn")
         
 

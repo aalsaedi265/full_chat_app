@@ -7,10 +7,10 @@ from chatterbot.trainers import ChatterBotCorpusTrainer #collection of words
 chatBot = ChatBot('ChatBot')
 
 # create ChatBot trainer
-trainer = ChatterBotCorpusTrainer(chatBot)
+# trainer = ChatterBotCorpusTrainer(chatBot)
 
 # Train ChatBot with English language corpus
-trainer.train("chatterbot.corpus.english")
+# trainer.train("chatterbot.corpus.english")
 
 # Greeting from chat bot
 print("Hi, I am ChatBot")

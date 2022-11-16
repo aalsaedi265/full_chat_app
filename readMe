@@ -4,6 +4,11 @@ https://chatterbot.readthedocs.io/en/stable/index.html
 
 the lindo docs video of lunching code 
 
+
+
+
+USED FOR CHATTERBOT LIBRARAY FOLDER: DOES NOT USE MACINE LEARNING
+
 https://www.linode.com/content/deploying-a-simple-python-web-server/
 git hub for all the code https://github.com/techwithtim/Flask-App-Hosted-On-VPS
 
@@ -17,7 +22,7 @@ flask_project
 
 server {
     listen 80;
-    server_name <public-server-ip>; #mine is 45.33.14.128
+    server_name <public-server-ip>; #mine is 45.33.14.128 this is were other can see
 
     location / {
         proxy_pass http://127.0.0.1:8000;
@@ -30,3 +35,6 @@ unlink /etc/nginx/sites-enabled/default
 
 
 run the app in the server  gunicorn -w 3 folder:file
+
+USED FOR CHATTERBOT LIBRARAY FOLDER: END
+

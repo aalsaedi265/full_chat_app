@@ -2,7 +2,7 @@
 from flask import Flask, request,render_template,jsonify
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
-from train import workIt
+from Chatterbot_libChatBot.train import workIt
 # from pureChatBot.bot import ask_user_for_sentence_and_produce_outPut
 
 
