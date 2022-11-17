@@ -97,34 +97,45 @@ nlu:
     - any good offers
     - good offers
     - delivery special
-    - days specials
     - sales
     - black friday or cyber monday
     - lay aways
+
+- intent: holiday_prices
+  examples: |
+    - deal of the day
+    - days specials
+    - black friday or cycber monday
+    - specials
+    - occasion discount
+
 - intent: tech_problems_need_human
   examples: |
     - already tried refreshing the page
     - what you told me did not work
     - you are use less
+    - nothing works
+    - better help
     - cutomer service
     - I want a person
     - I want a human 
+
 - intent: payment_menu_frozen
   examples: |
     - I can not make the order
-    - i can't make the order
     - I cant make the order
     - menu is paused
     - paused menu
+
 - intent: Frozen_page
   examples: |
-    - menu is paused
-    - paused menu
+    - frozen menu
     - payment screen frozen
     - menu is frozen
     - screen frozen
     - checkout fozen
     - page is frozen
+
 - intent: general_help
   examples: |
     - help

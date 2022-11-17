@@ -2,37 +2,33 @@ version: "3.1"
 
 stories:
 
-- story: stuck path 1
+- story: movement
   steps:
   - intent: payment_menu_frozen
   - action: utter_stuck_chat
-
-- story: stuck path 2
-  steps:
   - intent: Frozen_page
   - action: utter_stuck_refresh_noGo
-
-- story: stuck path 3
-  steps:
   - intent: tech_problems_need_human
-  - action: utter_still_stuck_chat  
+  - action: utter_still_stuck_chat 
 
 
 
-- story: less money 1
+- story: lower money
   steps:
   - intent: lower_prices
   - action: utter_holiday_promotions
-
-- story: less money 2
-  steps:
-  - intent: lower_prices
+  - action: utter_reward_program
   - action: utter_discount_speicals
 
-- story: less money 3
-  steps:
-  - intent: lower_prices
-  - action: utter_reward_program
+# - story: less money 2
+#   steps:
+#   - intent: lower_prices
+#   - action: utter_discount_speicals
+
+# - story: less money 3
+#   steps:
+#   - intent: lower_prices
+#   - action: utter_reward_program
 
 
 
@@ -52,6 +48,10 @@ stories:
   steps:
   - intent: general_help
   - action: utter_general_problem_one
+  - intent: goodbye
+  - action: utter_goodbye
+  - intent: bot_challenge
+  - action: utter_iamabot
 
 
 - story: how to use 2

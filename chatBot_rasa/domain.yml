@@ -16,6 +16,7 @@ intents:
   - payment_menu_frozen
   - common_reason_wont_checkout
   - basic_finlizing
+  - holiday_prices
 
 entities:
   - destination
