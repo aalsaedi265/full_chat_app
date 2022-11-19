@@ -75,6 +75,8 @@ nlu:
     - order help
     - help me order
     - order
+    - I want to order
+
   
 - intent: common_reason_wont_checkout
   examples: |
@@ -82,6 +84,11 @@ nlu:
     - help me buy
     - I can't make payment
     - help me checkout
+    - stuck on payment
+    - i want to buy and leave
+    - help checkout so i can go
+
+
 - intent: basic_finlizing
   examples: |
     - can not checkout
@@ -92,33 +99,50 @@ nlu:
     - any good deals
     - deal of the day
     - specials
-    - discounts
+    - rewards program
     - discount
     - any good offers
     - good offers
     - delivery special
     - sales
-    - black friday or cyber monday
     - lay aways
 
 - intent: holiday_prices
   examples: |
-    - deal of the day
+    - deal of the season
     - days specials
     - black friday or cycber monday
-    - specials
+    - specials for holiday
     - occasion discount
+    - christmas
+    - hanaka
+    - kawanza
+    - eid
+    - ramadan
+    - valintinse day
+    - easter
+    - holiday specials
+    - pilgramage of the Vanir or Aesier
 
 - intent: tech_problems_need_human
   examples: |
     - already tried refreshing the page
     - what you told me did not work
-    - you are use less
+    - you are useless
     - nothing works
     - better help
     - cutomer service
     - I want a person
-    - I want a human 
+    - I want a human
+    - hacked
+    - I think I was hacked
+    - security problems
+    - security
+    - charged but no order recived
+    - been some time and but no confirmation email and money was taken out
+    - no order delivered but money taken out
+    - money taken no confirmation
+
 
 - intent: payment_menu_frozen
   examples: |
@@ -126,11 +150,16 @@ nlu:
     - I cant make the order
     - menu is paused
     - paused menu
+    - payment not repsoning
+    - no checkout
+    - checkout not working
+    - can't pay
+
 
 - intent: Frozen_page
   examples: |
-    - frozen menu
-    - payment screen frozen
+    - page is frozen
+    - screen frozen
     - menu is frozen
     - screen frozen
     - checkout fozen

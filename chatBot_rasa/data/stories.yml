@@ -15,8 +15,9 @@ stories:
 
 - story: lower money
   steps:
-  - intent: lower_prices
+  - intent: holiday_prices
   - action: utter_holiday_promotions
+  - intent: lower_prices
   - action: utter_reward_program
   - action: utter_discount_speicals
 
@@ -32,17 +33,22 @@ stories:
 
 
 
-- story: use the site 1
+- story: using site 101
   steps:
   - intent: use_the_tech
   - action: utter_nav_select_goods
-
-- story: use the site 2
-  steps:
   - intent: common_reason_wont_checkout
   - action: utter_addressError_wont_checkOUt
+  - action: utter_still_stuck_chat 
+  - intent: frozenAdditonal_helpNeeded
+  - action: utter_wont_progress_forwards_problem_two
+  - intent: basic_finlizing
+  - action: utter_how_to_chekout_site_problem_three
 
-
+# - story: use the site 2
+#   steps:
+#   - intent: common_reason_wont_checkout
+#   - action: utter_addressError_wont_checkOUt
 
 - story: general help 1
   steps:
@@ -53,20 +59,15 @@ stories:
   - intent: bot_challenge
   - action: utter_iamabot
 
+# - story: use the site 2
+#   steps:
+#   - intent: frozenAdditonal_helpNeeded
+#   - action: utter_wont_progress_forwards_problem_two  
 
-- story: how to use 2
-  steps:
-  - intent: frozenAdditonal_helpNeeded
-  - action: utter_wont_progress_forwards_problem_two  
-
-- story: how to finilize purchase or use 3
-  steps:
-  - intent: basic_finlizing
-  - action: utter_how_to_chekout_site_problem_three
-
-
-
-
+# - story: how to finilize purchase or use 3
+#   steps:
+#   - intent: basic_finlizing
+#   - action: utter_how_to_chekout_site_problem_three
 
 
 - story: quality control affirm

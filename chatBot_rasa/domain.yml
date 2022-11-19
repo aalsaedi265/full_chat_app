@@ -127,13 +127,9 @@ responses:
   utter_holiday_promotions:
   - text: "on holidays promo code will be avaliable to place in discount promt when checking out"
 
-  utter_normal_day_speicals:
-  - text: "no discount today"
-
-
 
   utter_addressError_wont_checkOUt:
-  - text: "before chekcout make sure address is accurate"
+  - text: "before chekcout make sure address is accurate, credit card functioning with your bank, reload the page, if nothing works reach this contact"
 
   utter_nav_select_goods:
   - text: "go to the menu chose what you like, then go to cart to make sure you have all, finally checkout to pay"
@@ -147,7 +143,7 @@ responses:
   - text: "refresh the page, all iteams selected will be saved, and payment info will be reset"
 
   utter_stuck_refresh_noGo:
-  - text: "if you made an account, close the app, and reopen, this will reset the system; actions prevously take will still be save"
+  - text: "if you made an account, close the app and reopen, this will reset the system; actions prevously take will still be save"
 
   utter_still_stuck_chat:
   - text: "contact us at 254-366-1108"
