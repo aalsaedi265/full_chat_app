@@ -55,3 +55,7 @@ npx http-server .
 ------Lindoe install npm node and npx------
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 nvm install node
+
+
+All the resopnes laid out in a github
+https://github.com/hetpandya/rasa-song-chatbot/blob/dd8911bbd687ffa4a4d14feb6b672d74f4fa6124/docs/responses.md

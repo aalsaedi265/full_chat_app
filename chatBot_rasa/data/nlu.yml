@@ -1,6 +1,30 @@
 version: "3.1"
 
 nlu:
+
+- intent: song
+  examples: |
+    - make some sound
+    - audio play
+
+- intent: Ye
+  examples: |
+    - winter is coming
+    - walk like a man
+
+- intent: forgot_password
+  examples: |
+    - account
+    - need account
+    - make account
+    - locked out
+    - reset
+    - locked
+    - where to regester
+    - regester
+    - regester me
+
+
 - intent: greet
   examples: |
     - hello my name is [Prince Daemion](name)
@@ -179,6 +203,9 @@ nlu:
     - still no progress
     - page still fozen
     - it was not the way
+    - not sure how make it move forward
+    - need to move but won't progress
+
 - intent: bot_challenge
   examples: |
     - are you a bot?

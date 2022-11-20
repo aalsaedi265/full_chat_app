@@ -17,6 +17,9 @@ intents:
   - common_reason_wont_checkout
   - basic_finlizing
   - holiday_prices
+  - song
+  - Ye
+  - forgot_password
 
 entities:
   - destination
@@ -85,7 +88,9 @@ responses:
       payload: "/common_reason_wont_checkout"
 
 
-
+  utter_password_reset:
+  - text: go to this link, https://openai.com/blog/gpt-3-apps/ , or go the menu under login click forgot password
+  - text: if you don't have an account click of the button say regester
 
 
 
@@ -99,12 +104,21 @@ responses:
   - text: "hi, let get down to business"
 
 
+  utter_winter_byYe:
+  - text: "why not present Dr.Livesey"
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=6IeAiaPNw7s" } }
+
+
+  # utter_audio_song:
+  # - custom:
+  #       payload: audio
+  #       src: "https://aac.saavncdn.com/907/68fb60671b515580ff60f813d7170d2b_96.mp4"
+
+
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://preview.redd.it/1g4trqp0jph61.png?auto=webp&s=7b377b73601915d9f029cccdfe203ddbbb08d429"
 
-  utter_happy:
-  - text: "Good for you"
     
   utter_goodbye:
   - text: "did you know Staniss the maniss is the one true king, take care and spread the word"
