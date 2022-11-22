@@ -2,22 +2,21 @@ version: "3.1"
 
 nlu:
 
-- intent: leave
-  examples: |
-    - top G out
-    - timeout
+# - intent: leave
+#   examples: |
+#     - top G out
+#     - timeout
 
 
+# - intent: song
+#   examples: |
+#     - make some sound
+#     - audio play
 
-- intent: song
-  examples: |
-    - make some sound
-    - audio play
-
-- intent: Ye
-  examples: |
-    - winter is coming
-    - walk like a man
+# - intent: Ye
+#   examples: |
+#     - winter is coming
+#     - walk like a man
 
 - intent: forgot_password
   examples: |
@@ -30,12 +29,13 @@ nlu:
     - where to regester
     - regester
     - regester me
+    - forgot password
+    - password help
+
 
 
 - intent: greet
   examples: |
-    - hello my name is [abcdefghijklmnopqrstuvwxyz](name)
-    - hi, I am [abcdefghijklmnopqrstuvwxyz](name)
     - hey
     - hello
     - hi
@@ -94,10 +94,7 @@ nlu:
     - don't like that
     - no way
     - not really
-    - not the way
-    - its not the way
-    - it's not the way
-    - not what i am looking for
+
   
 - intent: use_the_tech
   examples: |
@@ -107,6 +104,7 @@ nlu:
     - help me order
     - order
     - I want to order
+    - I just want to order and can not figure it out
 
   
 - intent: common_reason_wont_checkout
@@ -125,6 +123,10 @@ nlu:
     - can not checkout
     - wont checkout
     - help me purchase, not confirming 
+    - won't let me pay and leave
+    - can not pay and leave
+    - can't pay so I can checkout
+
 - intent: lower_prices
   examples: |
     - any good deals
@@ -165,6 +167,7 @@ nlu:
     - cutomer service
     - I want a person
     - I want a human
+    - customer service
     - hacked
     - I think I was hacked
     - security problems
@@ -173,6 +176,7 @@ nlu:
     - been some time and but no confirmation email and money was taken out
     - no order delivered but money taken out
     - money taken no confirmation
+    
 
 
 - intent: payment_menu_frozen
@@ -212,6 +216,17 @@ nlu:
     - it was not the way
     - not sure how make it move forward
     - need to move but won't progress
+
+  - intent: not_right
+    examples: |
+    - not what I ask
+    - gave wrong answer
+    - not waht I wanted
+    - stupit useless machine
+    - not the way
+    - its not the way
+    - it's not the way
+    - not what i am looking for
 
 - intent: bot_challenge
   examples: |

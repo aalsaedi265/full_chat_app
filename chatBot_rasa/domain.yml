@@ -20,6 +20,7 @@ intents:
   - song
   - Ye
   - leave
+  - not_right
   - forgot_password
 
 entities:
@@ -101,7 +102,8 @@ responses:
   - text: "hi, let get down to business"
   - text: "how may I serve you"
 
-
+utter_speakClearly:
+  - text: "please repeat what you are looking for with as few words as possible as clearly as you can"
 
 
 
