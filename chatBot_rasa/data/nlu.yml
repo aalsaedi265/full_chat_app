@@ -2,6 +2,13 @@ version: "3.1"
 
 nlu:
 
+- intent: leave
+  examples: |
+    - top G out
+    - timeout
+
+
+
 - intent: song
   examples: |
     - make some sound
@@ -27,8 +34,8 @@ nlu:
 
 - intent: greet
   examples: |
-    - hello my name is [Prince Daemion](name)
-    - hi, I am [King Joffrey](name)
+    - hello my name is [abcdefghijklmnopqrstuvwxyz](name)
+    - hi, I am [abcdefghijklmnopqrstuvwxyz](name)
     - hey
     - hello
     - hi

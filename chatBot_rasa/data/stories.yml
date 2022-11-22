@@ -2,6 +2,26 @@ version: "3.1"
 
 stories:
 
+- story: gone
+  steps:
+  - intent: leave
+  - action: utter_askLeaveTypes
+
+- story: video test
+  steps:
+  - intent: Ye
+  - action: utter_music
+
+- story: say name dynamic experiment
+  steps:
+  # - action: action_login
+  # - slot_was_set:
+  #   - logged_in: True
+  - intent: greet
+  - action: utter_greet
+
+
+
 - story: movement
   steps:
   - intent: payment_menu_frozen
@@ -25,14 +45,6 @@ stories:
   - action: utter_reward_program
   - action: utter_discount_speicals
 
-
-
-- story: video test
-  steps:
-  # - intent: song
-  # - action: utter_audio_song
-  - intent: Ye
-  - action: utter_winter_byYe
 
 
 - story: using site 1
@@ -72,16 +84,9 @@ stories:
 
 
 
-
 - story: quality control bot
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- story: say name dynamic experiment
-  steps:
-  # - action: action_login
-  # - slot_was_set:
-  #   - logged_in: True
-  - intent: greet
-  - action: utter_greet
+

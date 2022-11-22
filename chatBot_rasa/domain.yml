@@ -19,6 +19,7 @@ intents:
   - holiday_prices
   - song
   - Ye
+  - leave
   - forgot_password
 
 entities:
@@ -30,19 +31,18 @@ entities:
 # https://rasa.com/docs/rasa/responses/#response-variations
 # https://www.youtube.com/watch?v=k2uA5gxTM80
 
-slots:
-  slot_name:
-    type: text
+
+# slots:
+   slot_name:
+     type: text
+     mappings:
+     - type: from_entity
+       entity: name
+  logged_in:
+    type: bool
     influence_conversation: False
     mappings:
-      - type: custom
-        entity: name
-      
-  # logged_in:
-  #   type: bool
-  #   influence_conversation: False
-  #   mappings:
-  #   - type: custom
+    - type: custom
   
   slot_destination:
     type: text
@@ -58,6 +58,53 @@ slots:
 
 
 responses:
+
+
+  # utter_askLeaveTypes:
+  # - text: "You can apply for below leaves:"
+    custom: 
+        payload: "collapsible"
+        data: 
+        - title: Sick Leave
+          description: Sick leave is time off from work that workers can use to stay home
+            to address their health and safety needs without losing pay.
+        - title: Earned Leave
+          description: 'Earned Leaves are the leaves which are earned in the previous year
+            and enjoyed in the preceding years. '
+        - title: Casual Leave
+          description: Casual Leave are granted for certain unforeseen situation or were you
+            are require to go for one or two days leaves to attend to personal matters and
+            not for vacation.
+        - title: Flexi Leave
+          description: Flexi leave is an optional leave which one can apply directly in system
+            at lease a week before.
+
+  # utter_music:
+  # - text: "why not present Dr.Livesey:"
+    # attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=6IeAiaPNw7s" } }
+
+
+  # utter_audio_song:
+  # - custom:
+  #       payload: audio
+  #       src: "https://aac.saavncdn.com/907/68fb60671b515580ff60f813d7170d2b_96.mp4"
+
+
+
+  utter_greet:
+  # - condition:
+  #     - type: slot
+  #       name: slot_name
+  #       value: true
+  #   text: "Hii, {slot_name}. Nice to see you again! How are you?"
+  # - text: "Hellooo, {slot_name}. Nice to see you again! How are you?"
+  - text: "hi, let get down to business"
+  - text: "how may I serve you"
+
+
+
+
+
 
 # https://forum.rasa.com/t/domain-yml-missing-text-or-custom-key-in-response-path/47215
   utter_general_problem_one:
@@ -94,25 +141,7 @@ responses:
 
 
 
-  utter_greet:
-  # - condition:
-  #     - type: slot
-  #       name: slot_name
-  #       value: true
-  #   text: "Hii, {slot_name}. Nice to see you again! How are you?"
-  - text: "Hellooo, {slot_name}. Nice to see you again! How are you?"
-  - text: "hi, let get down to business"
 
-
-  utter_winter_byYe:
-  - text: "why not present Dr.Livesey"
-    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=6IeAiaPNw7s" } }
-
-
-  # utter_audio_song:
-  # - custom:
-  #       payload: audio
-  #       src: "https://aac.saavncdn.com/907/68fb60671b515580ff60f813d7170d2b_96.mp4"
 
 
   utter_cheer_up:
@@ -128,10 +157,6 @@ responses:
   utter_iamabot:
   - text: "I am a machine, powered by electricity."
     image: "https://st2.depositphotos.com/1724125/5963/v/950/depositphotos_59638049-stock-illustration-cheering-crowd.jpg"
-
-
-
-
 
 
 
@@ -162,6 +187,9 @@ responses:
   utter_still_stuck_chat:
   - text: "contact us at 254-366-1108"
 
+
+# actions:
+#   - action_play_video
 
 session_config:
   session_expiration_time: 60
