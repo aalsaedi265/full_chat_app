@@ -33,8 +33,8 @@ entities:
 # https://www.youtube.com/watch?v=k2uA5gxTM80
 
 
-# slots:
-   slot_name:
+slots:
+  slot_name:
      type: text
      mappings:
      - type: from_entity
@@ -61,35 +61,6 @@ entities:
 responses:
 
 
-  # utter_askLeaveTypes:
-  # - text: "You can apply for below leaves:"
-    custom: 
-        payload: "collapsible"
-        data: 
-        - title: Sick Leave
-          description: Sick leave is time off from work that workers can use to stay home
-            to address their health and safety needs without losing pay.
-        - title: Earned Leave
-          description: 'Earned Leaves are the leaves which are earned in the previous year
-            and enjoyed in the preceding years. '
-        - title: Casual Leave
-          description: Casual Leave are granted for certain unforeseen situation or were you
-            are require to go for one or two days leaves to attend to personal matters and
-            not for vacation.
-        - title: Flexi Leave
-          description: Flexi leave is an optional leave which one can apply directly in system
-            at lease a week before.
-
-  # utter_music:
-  # - text: "why not present Dr.Livesey:"
-    # attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=6IeAiaPNw7s" } }
-
-
-  # utter_audio_song:
-  # - custom:
-  #       payload: audio
-  #       src: "https://aac.saavncdn.com/907/68fb60671b515580ff60f813d7170d2b_96.mp4"
-
 
 
   utter_greet:
@@ -102,10 +73,9 @@ responses:
   - text: "hi, let get down to business"
   - text: "how may I serve you"
 
-utter_speakClearly:
-  - text: "please repeat what you are looking for with as few words as possible as clearly as you can"
 
-
+  utter_speakClearly:
+  - text: please repeat what you are looking for with as few words as possible as clearly as you can"
 
 
 # https://forum.rasa.com/t/domain-yml-missing-text-or-custom-key-in-response-path/47215
@@ -190,8 +160,40 @@ utter_speakClearly:
   - text: "contact us at 254-366-1108"
 
 
+
+  # utter_askLeaveTypes:
+  # - text: "You can apply for below leaves:"
+  #   custom: 
+  #       payload: "collapsible"
+  #       data: 
+  #       - title: Sick Leave
+  #         description: Sick leave is time off from work that workers can use to stay home
+  #           to address their health and safety needs without losing pay.
+  #       - title: Earned Leave
+  #         description: 'Earned Leaves are the leaves which are earned in the previous year
+  #           and enjoyed in the preceding years. '
+  #       - title: Casual Leave
+  #         description: Casual Leave are granted for certain unforeseen situation or were you
+  #           are require to go for one or two days leaves to attend to personal matters and
+  #           not for vacation.
+  #       - title: Flexi Leave
+  #         description: Flexi leave is an optional leave which one can apply directly in system
+  #           at lease a week before.
+
+  # utter_music:
+  # - text: "why not present Dr.Livesey:"
+    # attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=6IeAiaPNw7s" } }
+
+
+  # utter_audio_song:
+  # - custom:
+  #       payload: audio
+  #       src: "https://aac.saavncdn.com/907/68fb60671b515580ff60f813d7170d2b_96.mp4"
+
 # actions:
 #   - action_play_video
+
+
 
 session_config:
   session_expiration_time: 60

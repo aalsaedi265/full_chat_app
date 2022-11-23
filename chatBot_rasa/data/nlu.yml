@@ -217,9 +217,9 @@ nlu:
     - not sure how make it move forward
     - need to move but won't progress
 
-  - intent: not_right
-    examples: |
-    - not what I ask
+- intent: not_right
+  examples: |
+    - not what i asked for
     - gave wrong answer
     - not waht I wanted
     - stupit useless machine

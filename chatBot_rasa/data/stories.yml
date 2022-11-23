@@ -13,11 +13,12 @@ stories:
 #   - action: utter_music
 
 
+
 - story: write more clearly
   steps:
-    intent: not_right
-    action: utter_speakClearly
-    
+  - intent: not_right
+  - action: utter_speakClearly
+
 - story: say name dynamic experiment
   steps:
   # - action: action_login

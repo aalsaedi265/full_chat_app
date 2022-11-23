@@ -1,3 +1,8 @@
+YML checker to validate the YML syntax
+https://yamlchecker.com/
+
+
+
 https://www.youtube.com/watch?v=PfYBXidENlg&t=986s helpful example
 
 RASA: ALL OPEN SOURSE tensorflow in USE
