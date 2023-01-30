@@ -30,13 +30,6 @@ pip install pyngrok https://rasa.com/docs/rasa/messaging-and-voice-channels/
 
 
 
-SERVER STUFF HTTP
-
-ngrok http 5005; rasa run
-
-pip install rasa_core
-
-rasa run --enable-api
 
 
 https://dev.to/petr7555/rasa-socket-io-integration-pfo
@@ -64,3 +57,10 @@ nvm install node
 
 All the resopnes laid out in a github
 https://github.com/hetpandya/rasa-song-chatbot/blob/dd8911bbd687ffa4a4d14feb6b672d74f4fa6124/docs/responses.md
+
+if LEGGACY ERRORS  occure run   pip3 install --upgrade rasa  this will upgrade the machine
+
+
+UNABLE TO BIND ERRORS  
+     ps -fA | grep python   to get already openined pid
+     kill -9 pid to close it preventing error

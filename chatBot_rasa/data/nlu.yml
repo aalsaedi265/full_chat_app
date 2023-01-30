@@ -155,6 +155,7 @@ nlu:
     - valintinse day
     - easter
     - holiday specials
+    - holiday deals
     - pilgramage of the Vanir or Aesier
 
 - intent: tech_problems_need_human
@@ -212,7 +213,7 @@ nlu:
 - intent: frozenAdditonal_helpNeeded
   examples: |
     - still no progress
-    - page still fozen
+    - page still frozen
     - it was not the way
     - not sure how make it move forward
     - need to move but won't progress

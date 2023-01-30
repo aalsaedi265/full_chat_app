@@ -122,9 +122,9 @@ responses:
 
     
   utter_goodbye:
-  - text: "did you know Staniss the maniss is the one true king, take care and spread the word"
-  - text: "Staniss is the prince that was promised, go and spread the word"
-  - text: "the title of azur ahi only belongs to staniss, go and pread the word"
+  - text: glad to serve you
+  - text: take care
+  - text: have a good one
 
   utter_iamabot:
   - text: "I am a machine, powered by electricity."
