@@ -238,3 +238,9 @@ nlu:
     - bot?
     - are you a robot?
     - human?
+
+- intent: arabic_canNot_checkout
+  examples: |
+    - لا يمكن الخروج
+    - لا أستطيع أن أشتري
+    - الخروج لا يعمل

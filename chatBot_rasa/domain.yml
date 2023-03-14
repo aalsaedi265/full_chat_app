@@ -76,7 +76,10 @@ responses:
 
   utter_speakClearly:
   - text: please repeat what you are looking for with as few words as possible as clearly as you can"
-
+  
+  utter_arabic_Checkout_response:
+  - text: تحقق من اتصال الإنترنت وتأكد من بيانات الاعتماد
+  - text: تأكد من عدم نفاد المنتج من المخزون
 
 # https://forum.rasa.com/t/domain-yml-missing-text-or-custom-key-in-response-path/47215
   utter_general_problem_one:
@@ -98,7 +101,7 @@ responses:
     - title: "need to talk to a human"
       payload: "/tech_problems_need_human"
 
-  utter_how_to_chekout_site_problem_three:
+  utter_schekout_site_problem_three:
   - text: "having diffecility making a selection or checkout help here"
     buttons:
     - title: "manuver and select to purchase"

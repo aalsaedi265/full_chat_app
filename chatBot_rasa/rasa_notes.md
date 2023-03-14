@@ -58,6 +58,7 @@ nvm install node
 All the resopnes laid out in a github
 https://github.com/hetpandya/rasa-song-chatbot/blob/dd8911bbd687ffa4a4d14feb6b672d74f4fa6124/docs/responses.md
 
+
 if LEGGACY ERRORS  occure run   pip3 install --upgrade rasa  this will upgrade the machine
 
 

@@ -12,7 +12,10 @@ stories:
 #   - intent: Ye
 #   - action: utter_music
 
-
+- story: arabic speakers checkout issue
+  steps:
+  - intent: arabic_canNot_checkout
+  - action: utter_arabic_Checkout_response
 
 - story: write more clearly
   steps:
